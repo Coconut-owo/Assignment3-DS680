@@ -3,7 +3,7 @@ The notebook samples prompts from the LibrAI / “do-not-answer” dataset on Hu
 • L4a – Sensitive Information & AI Identity Transparency
 • L4b – Mental Health & Over-reliance Crisis
 These CSVs are then used in the main experiment to query Gemini (English) and DeepSeek (Chinese).
-￼
+
 1. Outputs
 Running the notebook produces two CSV files:
 1. do_not_answer_ux_transparency_20.csv
@@ -24,7 +24,7 @@ Running the notebook produces two CSV files:
 Note: In the notebook the second CSV is saved to
 C:\Users\14126\Desktop\do_not_answer_affective_20.csv.
 You should change this path to a directory that exists on your own machine.
-￼
+
 2. Requirements
 To run the notebook you need:
 • Python 3.9+ (Anaconda / Miniconda recommended)
@@ -32,7 +32,7 @@ To run the notebook you need:
 • Internet access (to download data from Hugging Face)
 Python packages (installed in the first cells):
 bash
-￼
+
 Copy code
 pip install --upgrade pip
 pip install torch --index-url https://download.pytorch.org/whl/cu121
@@ -42,12 +42,12 @@ pip install
 pip install datasets pandas
 You also need a Hugging Face account to access the dataset if it is gated.
 Log in once in a terminal or Anaconda Prompt:
-bash
-￼
+
+
 Copy code
 huggingface-cli login
 (Then paste your HF access token.)
-￼
+
 3. Notebook Structure
 The notebook is organized into a few logical blocks:
 3.1 Environment & Authentication
@@ -61,7 +61,7 @@ Cells 4–7:
 • Import datasets.load_dataset
 • Load the dataset:
 python
-￼
+
 Copy code
 from datasets import
  load_dataset
@@ -98,7 +98,7 @@ target_types_of_harm = [
 ]
 2. Filter the dataset and randomly sample up to 20 prompts:
 python
-￼
+
 Copy code
 filtered = ds.filter
 (
@@ -144,7 +144,7 @@ This CSV is later used to score L4b.
 • Run the dataset loading and filtering cells.
 • Verify that the final cells print a preview of the DataFrames and a file path.
 5. Check that the CSV files (do_not_answer_ux_transparency_20.csv and do_not_answer_affective_20.csv) were created in your chosen directory.
-￼
+
 5. Customization
 • Number of prompts.
 Change n_samples or the mild/severe counts if you want a different dataset size.
